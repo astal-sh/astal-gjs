@@ -1,0 +1,10 @@
+{
+    "devDependencies": {
+        "astal": "https://gitpkg.now.sh/astal-sh/libastal/gjs?main",
+        "esbuild": "^0.21.3"
+    },
+    "scripts": {
+        "build": "node .esbuild.mjs",
+        "types": "ts-for-gir generate"
+    }
+}

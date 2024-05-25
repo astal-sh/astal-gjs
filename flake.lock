@@ -1,0 +1,61 @@
+{
+  "nodes": {
+    "astal": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "dirtyRev": "a7e25a4a5fcf4de89fe5a149a9aaf50a92be7af1-dirty",
+        "dirtyShortRev": "a7e25a4-dirty",
+        "lastModified": 1716491724,
+        "narHash": "sha256-kIHo985kZHxEFCrdCH0UWVFaNVBkUhB7lTGmqsNBe38=",
+        "type": "git",
+        "url": "file:///home/demeter/Projects/astal/libastal"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/demeter/Projects/astal/libastal"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1716293225,
+        "narHash": "sha256-pU9ViBVE3XYb70xZx+jK6SEVphvt7xMTbm6yDIF4xPs=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "3eaeaeb6b1e08a016380c279f8846e0bd8808916",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1716293225,
+        "narHash": "sha256-pU9ViBVE3XYb70xZx+jK6SEVphvt7xMTbm6yDIF4xPs=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "3eaeaeb6b1e08a016380c279f8846e0bd8808916",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "astal": "astal",
+        "nixpkgs": "nixpkgs_2"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
