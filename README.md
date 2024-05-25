@@ -20,5 +20,9 @@ Transpiling and running
 
 ```bash
 npm run build
-gjs -m dist/astal.js
+gjs -m dist/main.js
 ```
+
+> [!NOTE]
+> You don't have to use ts or jsx, you can still use plain js
+> by calling the widget function just like in ags

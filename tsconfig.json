@@ -14,7 +14,10 @@
         "declaration": true,
         "allowSyntheticDefaultImports": true,
         "checkJs": true,
-        "allowJs": true
+        "allowJs": true,
+        "jsx": "react-jsx",
+        "jsxFactory": "jsx",
+        "jsxImportSource": "node_modules/astal/src/jsx"
     },
     "include": [
         "./node_modules/@girs",

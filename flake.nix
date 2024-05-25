@@ -15,6 +15,7 @@
     nativeBuildInputs = with pkgs; [
       wrapGAppsHook
       gobject-introspection
+      esbuild
     ];
 
     buildInputs = with pkgs; [
@@ -32,7 +33,7 @@
         name = pname;
         src = ./.;
         dontNpmBuild = true;
-        npmDepsHash = "sha256-XNuT+Csuik8V1s0zJ37cRIYsdJeEKaQAS9PMn5fsf4s=";
+        npmDepsHash = "sha256-RnhAG2qTmQSIdCuHIuQw1aY6/HQpwjKtrDCvq/WJoy8=";
         installPhase = ''
           mkdir -p $out
           cp -r * $out
@@ -40,9 +41,9 @@
       };
 
       buildPhase = ''
-        ${pkgs.esbuild}/bin/esbuild \
+        esbuild \
           --bundle src/main.ts \
-          --outfile=shell.js \
+          --outdir=dist \
           --format=esm \
           --external:console \
           --external:system \
@@ -54,9 +55,9 @@
       installPhase = ''
         mkdir -p $out/bin
         mkdir -p $out/share
-        cp -r shell.js $out/share/shell.js
+        cp -r dist/* $out/share
         echo "#!/usr/bin/env bash" > $out/bin/astal-js
-        echo "${pkgs.gjs}/bin/gjs -m $out/share/shell.js $@" >> $out/bin/astal-js
+        echo "${pkgs.gjs}/bin/gjs -m $out/share/main.js $@" >> $out/bin/astal-js
         chmod +x $out/bin/astal-js
       '';
     };

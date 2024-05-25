@@ -1,31 +1,10 @@
-import { App, Astal, Widget, Variable, Gtk, bind } from "astal"
-
-const date = Variable("").poll(1000, 'date "+%H:%M:%S %b %e."')
-
-function Bar(monitor: number) {
-    return Widget.Window(
-        {
-            monitor,
-            application: App,
-            anchor: Astal.WindowAnchor.TOP |
-                Astal.WindowAnchor.LEFT |
-                Astal.WindowAnchor.RIGHT,
-            exclusivity: Astal.Exclusivity.EXCLUSIVE,
-        },
-        Widget.CenterBox({
-            startWidget: Widget.Label({
-                halign: Gtk.Align.START,
-                label: "Welcome to Astal.js!",
-            }),
-            endWidget: Widget.Label({
-                halign: Gtk.Align.END,
-                label: bind(date),
-            }),
-        }),
-    )
-}
+import "./style/style.css"
+import { App } from "astal"
+import Bar from "./widget/Bar"
+import { src } from "./lib"
 
 App.start({
+    css: `${src}/main.css`,
     requestHandler(request, res) {
         switch (request) {
             case "i":
@@ -38,5 +17,5 @@ App.start({
         }
     },
 }, function() {
-    Bar(0)
+    Bar({ monitor: 0 })
 })

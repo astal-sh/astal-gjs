@@ -1,0 +1,20 @@
+.bar {
+    background: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.bar>box {
+    background: #232323;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.bar button {
+    border-radius: 8px;
+    margin: 2px;
+}
+
+.bar .left {
+    margin-left: 1em;
+}

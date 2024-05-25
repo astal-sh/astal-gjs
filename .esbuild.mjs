@@ -1,11 +1,9 @@
 import esbuild from 'esbuild'
 
-const target = "dist/astal.js"
-
 await esbuild.build({
-    entryPoints: ['src/main.ts'],
+    entryPoints: ['src/main'],
     bundle: true,
-    outfile: target,
+    outdir: "dist",
     format: "esm",
     external: [
         "console",
