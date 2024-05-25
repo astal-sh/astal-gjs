@@ -5,16 +5,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "dirtyRev": "a7e25a4a5fcf4de89fe5a149a9aaf50a92be7af1-dirty",
-        "dirtyShortRev": "a7e25a4-dirty",
-        "lastModified": 1716491724,
-        "narHash": "sha256-kIHo985kZHxEFCrdCH0UWVFaNVBkUhB7lTGmqsNBe38=",
-        "type": "git",
-        "url": "file:///home/demeter/Projects/astal/libastal"
+        "lastModified": 1716644070,
+        "narHash": "sha256-mgLeobntPXK5OIMLd6/HQVqWwGvthU9cIQyOn0KkSBc=",
+        "owner": "astal-sh",
+        "repo": "libastal",
+        "rev": "24322cb85c337bd70b36452c1b4d92a5b7b4caf4",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:///home/demeter/Projects/astal/libastal"
+        "owner": "astal-sh",
+        "repo": "libastal",
+        "type": "github"
       }
     },
     "nixpkgs": {

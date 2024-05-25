@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    astal.url = "/home/demeter/Projects/astal/libastal";
+    astal.url = "github:astal-sh/libastal";
   };
 
   outputs = {
@@ -19,7 +19,7 @@
 
     buildInputs = with pkgs; [
       gjs
-      astal.packages.${system}.astal
+      astal.packages.${system}.default
     ];
   in {
     packages.${system}.default = pkgs.stdenv.mkDerivation rec {
