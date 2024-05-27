@@ -9,6 +9,23 @@ Starter project to get you started with gjs+libastal
 - node, for running esbuild
 - npm, for getting packages
 
+## Arch
+
+```bash
+yay libastal-git npm gjs
+
+```
+
+## NixOS
+
+There is flake included
+
+```bash
+nix develop
+```
+
+## developing
+
 ```bash
 git clone https://github.com/astal-sh/astal-gjs.git
 cd astal-gjs

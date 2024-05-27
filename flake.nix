@@ -57,7 +57,7 @@
         mkdir -p $out/share
         cp -r dist/* $out/share
         echo "#!/usr/bin/env bash" > $out/bin/astal-js
-        echo "${pkgs.gjs}/bin/gjs -m $out/share/main.js $@" >> $out/bin/astal-js
+        echo "${pkgs.gjs}/bin/gjs -m $out/share/main.js \$@" >> $out/bin/astal-js
         chmod +x $out/bin/astal-js
       '';
     };
