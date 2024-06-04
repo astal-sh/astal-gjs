@@ -10,7 +10,7 @@ function LeftBar() {
 
 function CenterBar() {
     return <box className={"center"}>
-        <label>{bind(date)}</label>
+        <label label={bind(date)} />
     </box>
 }
 

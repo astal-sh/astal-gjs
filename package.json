@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@ts-for-gir/cli": "^3.3.0",
         "astal": "https://gitpkg.now.sh/astal-sh/libastal/gjs?main",
         "esbuild": "^0.21.3"
     },
