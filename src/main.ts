@@ -12,12 +12,12 @@ App.start({
             case "q":
             case "quit": App.quit(); return res("ok");
             default: return App.eval(request)
-                .then(out => res(String(out)))
-                .catch(err => res(String(err)));
+                .then(res)
+                .catch(res);
         }
     },
-    client(message) {
-        message("quit")
+    client(message, arg = "") {
+        print(message(arg))
     },
     main() {
         Bar({ monitor: 0 })
