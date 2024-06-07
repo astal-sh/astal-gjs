@@ -16,6 +16,10 @@ App.start({
                 .catch(err => res(String(err)));
         }
     },
-}, function() {
-    Bar({ monitor: 0 })
+    client(message) {
+        message("quit")
+    },
+    main() {
+        Bar({ monitor: 0 })
+    },
 })
