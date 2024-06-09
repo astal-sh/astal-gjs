@@ -1,6 +1,5 @@
-import { App, Astal, Variable, Gtk, bind } from "astal"
-
-const date = Variable("").poll(1000, 'date "+%H:%M:%S %b %e."')
+import { App, Astal, Gtk, bind } from "astal"
+import { date } from "../lib"
 
 function LeftBar() {
     return <box className={"left"} halign={Gtk.Align.START}>
@@ -30,9 +29,9 @@ export default function Bar({ monitor }: { monitor: number }) {
         name={`bar${monitor}`}
         monitor={monitor}
         application={App}
-        anchor={Astal.WindowAnchor.TOP |
-            Astal.WindowAnchor.LEFT |
-            Astal.WindowAnchor.RIGHT}
+        anchor={Astal.WindowAnchor.TOP
+            | Astal.WindowAnchor.LEFT
+            | Astal.WindowAnchor.RIGHT}
         exclusivity={Astal.Exclusivity.EXCLUSIVE}>
         <centerbox>
             <LeftBar />
