@@ -33,7 +33,7 @@
         name = pname;
         src = ./.;
         dontNpmBuild = true;
-        npmDepsHash = "sha256-LQPOrDnGBkEUULk0Ri9BKa/tVx489jsL5XxRxr22QfE=";
+        npmDepsHash = "sha256-PNGvFsdYzyjBr2SW77CIpNo3QXnSE4rMoMwPfstMw2E=";
         installPhase = ''
           mkdir -p $out
           cp -r * $out

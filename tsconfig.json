@@ -5,21 +5,18 @@
         "lib": [
             "ES2022"
         ],
+        "baseUrl": ".",
         "outDir": "dist",
         "strict": true,
-        "moduleResolution": "node",
-        "baseUrl": ".",
+        "moduleResolution": "Bundler",
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "declaration": true,
-        "allowSyntheticDefaultImports": true,
         "checkJs": true,
         "allowJs": true,
         "jsx": "react-jsx",
         "jsxImportSource": "node_modules/astal/src/jsx"
     },
     "include": [
-        "./node_modules/@girs",
-        "./src"
+        "node_modules/@girs",
+        "src"
     ]
 }
