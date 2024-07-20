@@ -1,10 +1,8 @@
 import "./style/style.css"
 import { App } from "astal"
 import Bar from "./widget/Bar"
-import { src } from "./lib"
 
 App.start({
-    css: `${src}/main.css`,
     requestHandler(request, res) {
         switch (request) {
             case "i":

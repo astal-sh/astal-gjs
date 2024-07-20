@@ -1,11 +1,11 @@
 {
     "devDependencies": {
-        "@ts-for-gir/cli": "^3.3.0",
+        "@ts-for-gir/cli": "latest",
         "astal": "https://gitpkg.now.sh/astal-sh/libastal/gjs?main",
         "esbuild": "^0.21.3"
     },
     "scripts": {
-        "build": "node .esbuild.mjs",
-        "types": "ts-for-gir generate"
+        "build": "esbuild --bundle src/main.ts --outdir=dist --format=esm --external:console --external:system --external:file://* --external:gi://* --external:resource://*",
+        "types": "ts-for-gir generate -o node_modules/@girs --package"
     }
 }
