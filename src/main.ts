@@ -1,4 +1,3 @@
-import "./style/style.css"
 import { App } from "astal"
 import Bar from "./widget/Bar"
 

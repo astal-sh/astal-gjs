@@ -1,3 +1,4 @@
+import "./Bar.css"
 import { App, Astal, Gtk, bind } from "astal"
 import { date } from "../lib"
 
