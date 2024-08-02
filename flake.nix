@@ -15,7 +15,7 @@
     nativeBuildInputs = with pkgs; [
       wrapGAppsHook
       gobject-introspection
-      esbuild
+      nodejs
     ];
 
     buildInputs = with pkgs; [
@@ -26,39 +26,27 @@
     packages.${system}.default = pkgs.stdenv.mkDerivation rec {
       inherit nativeBuildInputs buildInputs;
 
-      pname = "astal-js";
+      pname = "astal";
       version = "0.1.0";
 
       src = pkgs.buildNpmPackage {
         name = pname;
         src = ./.;
-        dontNpmBuild = true;
-        npmDepsHash = "";
+        npmDepsHash = "sha256-Epa4MtYQaQo40S5Wzyqi08UOzY8Tlew8rf3xpf8MZKU=";
         installPhase = ''
-          mkdir -p $out
-          cp -r * $out
+          mkdir $out
+          cp -r dist/* $out
         '';
       };
-
-      buildPhase = ''
-        esbuild \
-          --bundle src/main.ts \
-          --outdir=dist \
-          --format=esm \
-          --external:console \
-          --external:system \
-          --external:file://\* \
-          --external:gi://\* \
-          --external:resource://\* \
-      '';
 
       installPhase = ''
         mkdir -p $out/bin
         mkdir -p $out/share
-        cp -r dist/* $out/share
-        echo "#!/usr/bin/env bash" > $out/bin/astal-js
-        echo "${pkgs.gjs}/bin/gjs -m $out/share/main.js \$@" >> $out/bin/astal-js
-        chmod +x $out/bin/astal-js
+        cp -r * $out/share
+
+        echo "#!/usr/bin/env bash" > $out/bin/${pname}
+        echo "$out/share/main.js \$@" >> $out/bin/${pname}
+        chmod +x $out/bin/${pname}
       '';
     };
 

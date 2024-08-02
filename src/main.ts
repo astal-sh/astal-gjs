@@ -1,3 +1,4 @@
+#!/usr/bin/gjs -m
 import { App } from "astal"
 import Bar from "./widget/Bar"
 
