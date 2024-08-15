@@ -32,7 +32,7 @@
       src = pkgs.buildNpmPackage {
         name = pname;
         src = ./.;
-        npmDepsHash = "sha256-Epa4MtYQaQo40S5Wzyqi08UOzY8Tlew8rf3xpf8MZKU=";
+        npmDepsHash = "sha256-EvfzvJ/DXRLzGSanPJUUBzDJqcFeWZSkrPQ/Oq5Ld6Y=";
         installPhase = ''
           mkdir $out
           cp -r dist/* $out
